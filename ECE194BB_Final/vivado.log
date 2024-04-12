@@ -1,0 +1,344 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Mar 12 22:10:02 2024
+# Process ID: 20500
+# Current directory: C:/Users/jackd/ECE194BB_Final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20984 C:\Users\jackd\ECE194BB_Final\ECE194BB_Final.xpr
+# Log file: C:/Users/jackd/ECE194BB_Final/vivado.log
+# Journal file: C:/Users/jackd/ECE194BB_Final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/jackson_newman/Desktop/ECE194BB_Final' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 917.492 ; gain = 302.910
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B62005A
+set_property PROGRAM.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+open_bd_design {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:jtag_axi:1.2 - jtag_axi_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_100M
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - reset_inv_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:module_ref:fsm:1.0 - fsm_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz/locked(undef) and /rst_clk_wiz_100M/ext_reset_in(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz/clk_out2(clk) and /fsm_0/clk_sm(undef)
+Successfully read diagram <design_1> from BD file <C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2515.277 ; gain = 0.000
+get_property value [get_hw_memory_regions {0xC0000000}] address_range
+invalid command name "get_hw_memory_regions"
+get_property value [get_property MEMORY_CONTENT [get_hw_cell [get_hw_objs -filter {NAME =~ */axi_mem_intercon*}]] -address_range {0xC0000000}]
+invalid command name "get_hw_objs"
+get_property value [get_property MEMORY_CONTENT [get_hw_cells -filter {NAME =~ */axi_mem_intercon*}] -address_range {0xC0000000}]
+invalid command name "get_hw_cells"
+get_property value [get_property MEMORY_CONTENT [get_bd_cells -filter {NAME =~ */axi_mem_intercon*}] -address_range {0xC0000000}]
+WARNING: [BD 5-230] No cells matched 'get_bd_cells -filter {NAME =~ */axi_mem_intercon*}'
+ERROR: [Common 17-170] Unknown option '-address_range', please type 'get_property -help' for usage info.
+open_bd_design {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/design_1.bd}
+create_hw_axi_txn -force read_mem [get_hw_axis hw_axi_1] -type read -address C000_0000 -len 1
+WARNING: [Labtoolstcl 44-226] No matching hw_axi were found
+ERROR: [Common 17-70] Application Exception: Invalid hw_axi handle
+get_hw_axis
+WARNING: [Labtoolstcl 44-226] No matching hw_axi were found
+get_hw_axi_txns
+WARNING: [Labtoolstcl 44-227] No matching hw_axi_txns were found
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+get_hw_axis
+WARNING: [Labtoolstcl 44-226] No matching hw_axi were found
+get_cfgmem_parts
+is25lp128f-spi-x1_x2_x4 is25wp128f-spi-x1_x2_x4 s25fl256l-spi-x1_x2_x4 is25lp256d-spi-x1_x2_x4 is25wp064a-spi-x1_x2_x4 is25wp032d-spi-x1_x2_x4 is25lp016d-spi-x1_x2_x4 is25lp080d-spi-x1_x2_x4 is25wp080d-spi-x1_x2_x4 is25lp064a-spi-x1_x2_x4 is25lp032d-spi-x1_x2_x4 is25wp016d-spi-x1_x2_x4 is25wp256d-spi-x1_x2_x4 s25fl128l-spi-x1_x2_x4 s25fl064l-spi-x1_x2_x4 mx66l2g45g-spi-x1_x2_x4 mx66u2g45g-spi-x1_x2_x4 mx25v8035f-spi-x1_x2_x4 mx25u8033e-spi-x1_x2_x4 mx25v1635f-spi-x1_x2_x4 mx25u1635f-spi-x1_x2_x4 mx25l3233f-spi-x1_x2_x4 mx25u3235f-spi-x1_x2_x4 mx25l6433f-spi-x1_x2_x4 mx25u6435f-spi-x1_x2_x4 mx66l1g45g-spi-x1_x2_x4 mx66u1g45g-spi-x1_x2_x4 mx25l12845g-spi-x1_x2_x4 mx25u12835f-spi-x1_x2_x4 mt28fw02gb-bpi-x16 s70gl02gt-bpi-x16 s70gl02gt-bpi-x8 s29gl01gt-bpi-x16 s29gl512t-bpi-x16 s29gl01gt-bpi-x8 s29gl512t-bpi-x8 m29w256gl-bpi-x8 m29w256gh-bpi-x8 m29w128gl-bpi-x8 m29w128gh-bpi-x8 m29w640gl-bpi-x8 m29w640gh-bpi-x8 m29w256gl-bpi-x16 m29w256gh-bpi-x16 m29w128gl-bpi-x16 m29w128gh-bpi-x16 m29w640gl-bpi-x16 m29w640gh-bpi-x16 mt28ew01ga-bpi-x8 mt28ew512a-bpi-x8 mt28ew256a-bpi-x8 mt28ew128a-bpi-x8 mt28ew01ga-bpi-x16 mt28ew512a-bpi-x16 mt28ew256a-bpi-x16 mt28ew128a-bpi-x16 s25fl116k-spi-x1_x2_x4 mx25l25645g-spi-x1_x2_x4 mx25u25645g-spi-x1_x2_x4 mx25l51245g-spi-x1_x2_x4 mx25u51245g-spi-x1_x2_x4 mt25qu02g-spi-x1_x2_x4 mt25qu01g-spi-x1_x2_x4 mt25ql02g-spi-x1_x2_x4 mt25ql01g-spi-x1_x2_x4 s70gl02gs-bpi-x16 s70gl02gp-bpi-x16 s25fl132k-spi-x1_x2_x4 mt25ql512-spi-x1_x2_x4 mt28gu01gaax1e-bpi-x16 mt28gu512aax1e-bpi-x16 mt28gu256aax1e-bpi-x16 s25fl256sxxxxxx1-spi-x1_x2_x4 s25fl128sxxxxxx1-spi-x1_x2_x4 mt25qu256-spi-x1_x2_x4 n25q64-1.8v-spi-x1_x2_x4 n25q64-3.3v-spi-x1_x2_x4 n25q32-1.8v-spi-x1_x2_x4 n25q32-3.3v-spi-x1_x2_x4 mt25ql256-spi-x1_x2_x4 mt25qu128-spi-x1_x2_x4 mt25ql128-spi-x1_x2_x4 mt25qu512-spi-x1_x2_x4 s25fl512s-spi-x1_x2_x4 s25fl256sxxxxxx0-spi-x1_x2_x4 s25fl164k-spi-x1_x2_x4 s25fl128sxxxxxx0-spi-x1_x2_x4 s25fl064p-spi-x1_x2_x4 s25fl032p-spi-x1_x2_x4 28f00bm29ew-bpi-x8 28f00am29ew-bpi-x8 28f512m29ew-bpi-x8 28f256m29ew-bpi-x8 28f128m29ew-bpi-x8 28f064m29ewb-bpi-x8 28f064m29ewt-bpi-x8 28f064m29ewl-bpi-x8 28f064m29ewh-bpi-x8 28f00bm29ew-bpi-x16 28f00am29ew-bpi-x16 28f512m29ew-bpi-x16 28f256m29ew-bpi-x16 28f128m29ew-bpi-x16 28f064m29ewb-bpi-x16 28f064m29ewt-bpi-x16 28f064m29ewl-bpi-x16 28f064m29ewh-bpi-x16 28f128g18f-bpi-x16 28f00ap33b-bpi-x16 28f00ap33e-bpi-x16 28f00ap33t-bpi-x16 28f512p33b-bpi-x16 28f512p33e-bpi-x16 28f512p33t-bpi-x16 28f256p33b-bpi-x16 28f256p33t-bpi-x16 28f128p33b-bpi-x16 28f128p33t-bpi-x16 28f640p33b-bpi-x16 28f640p33t-bpi-x16 28f00bp30e-bpi-x16 28f00ap30b-bpi-x16 28f00ap30e-bpi-x16 28f00ap30t-bpi-x16 28f512p30b-bpi-x16 28f512p30e-bpi-x16 28f512p30t-bpi-x16 28f256p30b-bpi-x16 28f256p30t-bpi-x16 28f128p30b-bpi-x16 28f128p30t-bpi-x16 28f640p30b-bpi-x16 28f640p30t-bpi-x16 s29gl01gp-bpi-x8 s29gl512p-bpi-x8 s29gl256p-bpi-x8 s29gl128p-bpi-x8 s29gl01gs-bpi-x16 s29gl512s-bpi-x16 s29gl256s-bpi-x16 s29gl01gp-bpi-x16 s29gl512p-bpi-x16 s29gl256p-bpi-x16 s29gl128p-bpi-x16 s29gl128s-bpi-x16 is25lp128f-spi-x1_x2_x4_x8 is25lp128f-spi-x1_x2_x4 is25wp128f-spi-x1_x2_x4_x8 is25wp128f-spi-x1_x2_x4 s25fl128l-spi-x1_x2_x4_x8 is25lp256d-spi-x1_x2_x4_x8 is25lp256d-spi-x1_x2_x4 is25wp064a-spi-x1_x2_x4_x8 is25wp064a-spi-x1_x2_x4 is25wp032d-spi-x1_x2_x4_x8 is25wp032d-spi-x1_x2_x4 is25lp016d-spi-x1_x2_x4_x8 is25lp016d-spi-x1_x2_x4 is25lp080d-spi-x1_x2_x4_x8 is25lp080d-spi-x1_x2_x4 is25wp080d-spi-x1_x2_x4_x8 is25wp080d-spi-x1_x2_x4 is25lp064a-spi-x1_x2_x4_x8 is25lp064a-spi-x1_x2_x4 is25lp032d-spi-x1_x2_x4_x8 is25lp032d-spi-x1_x2_x4 is25wp016d-spi-x1_x2_x4_x8 is25wp016d-spi-x1_x2_x4 is25wp256d-spi-x1_x2_x4_x8 is25wp256d-spi-x1_x2_x4 s25fl128l-spi-x1_x2_x4 s25fl064l-spi-x1_x2_x4 mx66l2g45g-spi-x1_x2_x4_x8 mx66l2g45g-spi-x1_x2_x4 mx66u2g45g-spi-x1_x2_x4_x8 mx66u2g45g-spi-x1_x2_x4 mx25v8035f-spi-x1_x2_x4_x8 mx25v8035f-spi-x1_x2_x4 mx25u8033e-spi-x1_x2_x4_x8 mx25u8033e-spi-x1_x2_x4 mx25v1635f-spi-x1_x2_x4_x8 mx25v1635f-spi-x1_x2_x4 mx25u1635f-spi-x1_x2_x4_x8 mx25u1635f-spi-x1_x2_x4 mx25l3233f-spi-x1_x2_x4_x8 mx25l3233f-spi-x1_x2_x4 mx25u3235f-spi-x1_x2_x4_x8 mx25u3235f-spi-x1_x2_x4 mx25l6433f-spi-x1_x2_x4_x8 mx25l6433f-spi-x1_x2_x4 mx25u6435f-spi-x1_x2_x4_x8 mx25u6435f-spi-x1_x2_x4 mx66l1g45g-spi-x1_x2_x4_x8 mx66l1g45g-spi-x1_x2_x4 mx66u1g45g-spi-x1_x2_x4_x8 mx66u1g45g-spi-x1_x2_x4 mx25l12845g-spi-x1_x2_x4_x8 mx25l12845g-spi-x1_x2_x4 mx25u12835f-spi-x1_x2_x4_x8 mx25u12835f-spi-x1_x2_x4 mt28fw02gb-bpi-x16 s70gl02gt-bpi-x16 s70gl02gt-bpi-x8 s29gl01gt-bpi-x16 s29gl512t-bpi-x16 s29gl01gt-bpi-x8 s29gl512t-bpi-x8 m29w256gl-bpi-x8 m29w256gh-bpi-x8 m29w128gl-bpi-x8 m29w128gh-bpi-x8 m29w640gl-bpi-x8 m29w640gh-bpi-x8 m29w256gl-bpi-x16 m29w256gh-bpi-x16 m29w128gl-bpi-x16 m29w128gh-bpi-x16 m29w640gl-bpi-x16 m29w640gh-bpi-x16 mx25l25645g-spi-x1_x2_x4_x8 mx25u25645g-spi-x1_x2_x4_x8 mx25l51245g-spi-x1_x2_x4_x8 mx25u51245g-spi-x1_x2_x4_x8 mt28ew01ga-bpi-x8 mt28ew512a-bpi-x8 mt28ew256a-bpi-x8 mt28ew128a-bpi-x8 mt28ew01ga-bpi-x16 mt28ew512a-bpi-x16 mt28ew256a-bpi-x16 mt28ew128a-bpi-x16 s25fl116k-spi-x1_x2_x4 mx25l25645g-spi-x1_x2_x4 mx25u25645g-spi-x1_x2_x4 s25fl256sxxxxxx1-spi-x1_x2_x4_x8 s25fl256sxxxxxx0-spi-x1_x2_x4_x8 s25fl128sxxxxxx1-spi-x1_x2_x4_x8 s25fl128sxxxxxx0-spi-x1_x2_x4_x8 s25fl512s-spi-x1_x2_x4_x8 mt25ql128-spi-x1_x2_x4_x8 mt25ql256-spi-x1_x2_x4_x8 mt25qu128-spi-x1_x2_x4_x8 mx25l51245g-spi-x1_x2_x4 mx25u51245g-spi-x1_x2_x4 mt25qu02g-spi-x1_x2_x4_x8 mt25qu02g-spi-x1_x2_x4 mt25qu01g-spi-x1_x2_x4_x8 mt25qu01g-spi-x1_x2_x4 mt25ql02g-spi-x1_x2_x4_x8 mt25ql02g-spi-x1_x2_x4 mt25ql01g-spi-x1_x2_x4_x8 mt25ql01g-spi-x1_x2_x4 s70gl02gs-bpi-x16 s70gl02gp-bpi-x16 s25fl132k-spi-x1_x2_x4 mt25ql512-spi-x1_x2_x4_x8 mt25ql512-spi-x1_x2_x4 mt25qu512-spi-x1_x2_x4_x8 mt28gu01gaax1e-bpi-x16 mt28gu512aax1e-bpi-x16 mt28gu256aax1e-bpi-x16 s25fl256sxxxxxx1-spi-x1_x2_x4 s25fl128sxxxxxx1-spi-x1_x2_x4 mt25qu256-spi-x1_x2_x4 n25q64-1.8v-spi-x1_x2_x4 n25q64-3.3v-spi-x1_x2_x4 n25q32-1.8v-spi-x1_x2_x4 n25q32-3.3v-spi-x1_x2_x4 mt25qu256-spi-x1_x2_x4_x8 mt25ql256-spi-x1_x2_x4 mt25qu128-spi-x1_x2_x4 mt25ql128-spi-x1_x2_x4 mt25qu512-spi-x1_x2_x4 s25fl512s-spi-x1_x2_x4 s25fl256sxxxxxx0-spi-x1_x2_x4 s25fl164k-spi-x1_x2_x4 s25fl128sxxxxxx0-spi-x1_x2_x4 s25fl064p-spi-x1_x2_x4 s25fl032p-spi-x1_x2_x4 28f00bm29ew-bpi-x8 28f00am29ew-bpi-x8 28f512m29ew-bpi-x8 28f256m29ew-bpi-x8 28f128m29ew-bpi-x8 28f064m29ewb-bpi-x8 28f064m29ewt-bpi-x8 28f064m29ewl-bpi-x8 28f064m29ewh-bpi-x8 28f00bm29ew-bpi-x16 28f00am29ew-bpi-x16 28f512m29ew-bpi-x16 28f256m29ew-bpi-x16 28f128m29ew-bpi-x16 28f064m29ewb-bpi-x16 28f064m29ewt-bpi-x16 28f064m29ewl-bpi-x16 28f064m29ewh-bpi-x16 28f128g18f-bpi-x16 28f00ap33b-bpi-x16 28f00ap33e-bpi-x16 28f00ap33t-bpi-x16 28f512p33b-bpi-x16 28f512p33e-bpi-x16 28f512p33t-bpi-x16 28f256p33b-bpi-x16 28f256p33t-bpi-x16 28f128p33b-bpi-x16 28f128p33t-bpi-x16 28f640p33b-bpi-x16 28f640p33t-bpi-x16 28f00bp30e-bpi-x16 28f00ap30b-bpi-x16 28f00ap30e-bpi-x16 28f00ap30t-bpi-x16 28f512p30b-bpi-x16 28f512p30e-bpi-x16 28f512p30t-bpi-x16 28f256p30b-bpi-x16 28f256p30t-bpi-x16 28f128p30b-bpi-x16 28f128p30t-bpi-x16 28f640p30b-bpi-x16 28f640p30t-bpi-x16 s29gl01gp-bpi-x8 s29gl512p-bpi-x8 s29gl256p-bpi-x8 s29gl128p-bpi-x8 s29gl01gs-bpi-x16 s29gl512s-bpi-x16 s29gl256s-bpi-x16 s29gl01gp-bpi-x16 s29gl512p-bpi-x16 s29gl256p-bpi-x16 s29gl128p-bpi-x16 s29gl128s-bpi-x16 is25lp128f-spi-x1_x2_x4_x8 is25lp128f-spi-x1_x2_x4 is25wp128f-spi-x1_x2_x4_x8 is25wp128f-spi-x1_x2_x4 s25fl128l-spi-x1_x2_x4_x8 is25lp256d-spi-x1_x2_x4_x8 is25lp256d-spi-x1_x2_x4 is25wp064a-spi-x1_x2_x4_x8 is25wp064a-spi-x1_x2_x4 is25wp032d-spi-x1_x2_x4_x8 is25wp032d-spi-x1_x2_x4 is25lp016d-spi-x1_x2_x4_x8 is25lp016d-spi-x1_x2_x4 is25lp080d-spi-x1_x2_x4_x8 is25lp080d-spi-x1_x2_x4 is25wp080d-spi-x1_x2_x4_x8 is25wp080d-spi-x1_x2_x4 is25lp064a-spi-x1_x2_x4_x8 is25lp064a-spi-x1_x2_x4 is25lp032d-spi-x1_x2_x4_x8 is25lp032d-spi-x1_x2_x4 is25wp016d-spi-x1_x2_x4_x8 is25wp016d-spi-x1_x2_x4 is25wp256d-spi-x1_x2_x4_x8 is25wp256d-spi-x1_x2_x4 s25fl128l-spi-x1_x2_x4 s25fl064l-spi-x1_x2_x4 mx66l2g45g-spi-x1_x2_x4_x8 mx66l2g45g-spi-x1_x2_x4 mx66u2g45g-spi-x1_x2_x4_x8 mx66u2g45g-spi-x1_x2_x4 mx25v8035f-spi-x1_x2_x4_x8 mx25v8035f-spi-x1_x2_x4 mx25u8033e-spi-x1_x2_x4_x8 mx25u8033e-spi-x1_x2_x4 mx25v1635f-spi-x1_x2_x4_x8 mx25v1635f-spi-x1_x2_x4 mx25u1635f-spi-x1_x2_x4_x8 mx25u1635f-spi-x1_x2_x4 mx25l3233f-spi-x1_x2_x4_x8 mx25l3233f-spi-x1_x2_x4 mx25u3235f-spi-x1_x2_x4_x8 mx25u3235f-spi-x1_x2_x4 mx25l6433f-spi-x1_x2_x4_x8 mx25l6433f-spi-x1_x2_x4 mx25u6435f-spi-x1_x2_x4_x8 mx25u6435f-spi-x1_x2_x4 mx66l1g45g-spi-x1_x2_x4_x8 mx66l1g45g-spi-x1_x2_x4 mx66u1g45g-spi-x1_x2_x4_x8 mx66u1g45g-spi-x1_x2_x4 mx25l12845g-spi-x1_x2_x4_x8 mx25l12845g-spi-x1_x2_x4 mx25u12835f-spi-x1_x2_x4_x8 mx25u12835f-spi-x1_x2_x4 mt28fw02gb-bpi-x16 s70gl02gt-bpi-x16 s70gl02gt-bpi-x8 s29gl01gt-bpi-x16 s29gl512t-bpi-x16 s29gl01gt-bpi-x8 s29gl512t-bpi-x8 m29w256gl-bpi-x8 m29w256gh-bpi-x8 m29w128gl-bpi-x8 m29w128gh-bpi-x8 m29w640gl-bpi-x8 m29w640gh-bpi-x8 m29w256gl-bpi-x16 m29w256gh-bpi-x16 m29w128gl-bpi-x16 m29w128gh-bpi-x16 m29w640gl-bpi-x16 m29w640gh-bpi-x16 mx25l25645g-spi-x1_x2_x4_x8 mx25u25645g-spi-x1_x2_x4_x8 mx25l51245g-spi-x1_x2_x4_x8 mx25u51245g-spi-x1_x2_x4_x8 mt28ew01ga-bpi-x8 mt28ew512a-bpi-x8 mt28ew256a-bpi-x8 mt28ew128a-bpi-x8 mt28ew01ga-bpi-x16 mt28ew512a-bpi-x16 mt28ew256a-bpi-x16 mt28ew128a-bpi-x16 s25fl116k-spi-x1_x2_x4 mx25l25645g-spi-x1_x2_x4 mx25u25645g-spi-x1_x2_x4 s25fl256sxxxxxx1-spi-x1_x2_x4_x8 s25fl256sxxxxxx0-spi-x1_x2_x4_x8 s25fl128sxxxxxx1-spi-x1_x2_x4_x8 s25fl128sxxxxxx0-spi-x1_x2_x4_x8 s25fl512s-spi-x1_x2_x4_x8 mt25ql128-spi-x1_x2_x4_x8 mt25ql256-spi-x1_x2_x4_x8 mt25qu128-spi-x1_x2_x4_x8 mx25l51245g-spi-x1_x2_x4 mx25u51245g-spi-x1_x2_x4 mt25qu02g-spi-x1_x2_x4_x8 mt25qu02g-spi-x1_x2_x4 mt25qu01g-spi-x1_x2_x4_x8 mt25qu01g-spi-x1_x2_x4 mt25ql02g-spi-x1_x2_x4_x8 mt25ql02g-spi-x1_x2_x4 mt25ql01g-spi-x1_x2_x4_x8 mt25ql01g-spi-x1_x2_x4 s70gl02gs-bpi-x16 s70gl02gp-bpi-x16 s25fl132k-spi-x1_x2_x4 mt25ql512-spi-x1_x2_x4_x8 mt25ql512-spi-x1_x2_x4 mt25qu512-spi-x1_x2_x4_x8 mt28gu01gaax1e-bpi-x16 mt28gu512aax1e-bpi-x16 mt28gu256aax1e-bpi-x16 s25fl256sxxxxxx1-spi-x1_x2_x4 s25fl128sxxxxxx1-spi-x1_x2_x4 mt25qu256-spi-x1_x2_x4 n25q64-1.8v-spi-x1_x2_x4 n25q64-3.3v-spi-x1_x2_x4 n25q32-1.8v-spi-x1_x2_x4 n25q32-3.3v-spi-x1_x2_x4 mt25qu256-spi-x1_x2_x4_x8 mt25ql256-spi-x1_x2_x4 mt25qu128-spi-x1_x2_x4 mt25ql128-spi-x1_x2_x4 mt25qu512-spi-x1_x2_x4 s25fl512s-spi-x1_x2_x4 s25fl256sxxxxxx0-spi-x1_x2_x4 s25fl164k-spi-x1_x2_x4 s25fl128sxxxxxx0-spi-x1_x2_x4 s25fl064p-spi-x1_x2_x4 s25fl032p-spi-x1_x2_x4 28f00bm29ew-bpi-x8 28f00am29ew-bpi-x8 28f512m29ew-bpi-x8 28f256m29ew-bpi-x8 28f128m29ew-bpi-x8 28f064m29ewb-bpi-x8 28f064m29ewt-bpi-x8 28f064m29ewl-bpi-x8 28f064m29ewh-bpi-x8 28f00bm29ew-bpi-x16 28f00am29ew-bpi-x16 28f512m29ew-bpi-x16 28f256m29ew-bpi-x16 28f128m29ew-bpi-x16 28f064m29ewb-bpi-x16 28f064m29ewt-bpi-x16 28f064m29ewl-bpi-x16 28f064m29ewh-bpi-x16 28f128g18f-bpi-x16 28f00ap33b-bpi-x16 28f00ap33e-bpi-x16 28f00ap33t-bpi-x16 28f512p33b-bpi-x16 28f512p33e-bpi-x16 28f512p33t-bpi-x16 28f256p33b-bpi-x16 28f256p33t-bpi-x16 28f128p33b-bpi-x16 28f128p33t-bpi-x16 28f640p33b-bpi-x16 28f640p33t-bpi-x16 ...
+get_hw_axi_txns
+WARNING: [Labtoolstcl 44-227] No matching hw_axi_txns were found
+get_hw_devices
+xc7a100t_0
+get_hw_sio_txs
+WARNING: [Labtoolstcl 44-158] No matching hw_sio_txs were found.
+mrd 0xC000_0000 1
+invalid command name "mrd"
+get_bd_pins /gpio_0/GPIO_TRI_O
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /gpio_0/GPIO_TRI_O'
+get_bd_pins /gpio_0/gpio_io_o
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /gpio_0/gpio_io_o'
+get_bd_pins /axi_gpio_0/gpio_io_o
+/axi_gpio_0/gpio_io_o
+startgroup
+set_property -dict [list CONFIG.PROTOCOL {2}] [get_bd_cells jtag_axi_0]
+endgroup
+startgroup
+endgroup
+save_bd_design
+Wrote  : <C:\Users\jackd\ECE194BB_Final\ECE194BB_Final.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_jtag_axi_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [BD 41-721] Attempt to set value '0' on disabled parameter 'ID_WIDTH' of cell '/axi_bram_ctrl_0' is ignored
+WARNING: [BD 41-721] Attempt to set value 'NO' on disabled parameter 'SUPPORTS_NARROW_BURST' of cell '/axi_bram_ctrl_0' is ignored
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+Wrote  : <C:\Users\jackd\ECE194BB_Final\ECE194BB_Final.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block jtag_axi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reset_inv_0 .
+Exporting to file c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/hw_handoff/design_1_smartconnect_0_0.hwh
+Generated Block Design Tcl file c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/hw_handoff/design_1_smartconnect_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/synth/design_1_smartconnect_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fsm_0 .
+Exporting to file C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Tue Mar 12 22:44:06 2024] Launched design_1_smartconnect_0_0_synth_1, design_1_jtag_axi_0_1_synth_1, synth_1...
+Run output will be captured here:
+design_1_smartconnect_0_0_synth_1: C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/design_1_smartconnect_0_0_synth_1/runme.log
+design_1_jtag_axi_0_1_synth_1: C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/design_1_jtag_axi_0_1_synth_1/runme.log
+synth_1: C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/synth_1/runme.log
+[Tue Mar 12 22:44:06 2024] Launched impl_1...
+Run output will be captured here: C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:00:33 . Memory (MB): peak = 2649.320 ; gain = 134.043
+regenerate_bd_layout
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+WARNING: [Xicom 50-38] xicom: No CseXsdb register file specified for CseXsdb slave type: 0, cse driver version: 0. Slave initialization skipped.
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+get_hw_axis
+WARNING: [Labtoolstcl 44-226] No matching hw_axi were found
+open_bd_design {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets BRAM_PORTB_0_1]
+startgroup
+make_bd_pins_external  [get_bd_pins blk_mem_gen_0/rstb]
+WARNING: [BD 41-1306] The connection to interface pin /blk_mem_gen_0/rstb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+endgroup
+make_wrapper -files [get_files C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-721] Attempt to set value '0' on disabled parameter 'ID_WIDTH' of cell '/axi_bram_ctrl_0' is ignored
+WARNING: [BD 41-721] Attempt to set value 'NO' on disabled parameter 'SUPPORTS_NARROW_BURST' of cell '/axi_bram_ctrl_0' is ignored
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+Wrote  : <C:\Users\jackd\ECE194BB_Final\ECE194BB_Final.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+WARNING: [Vivado 12-3482] The generated wrapper file has already been imported into the project, the imported file is:
+'C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/imports/hdl/design_1_wrapper.v'
+make_wrapper: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2686.996 ; gain = 19.074
+import_files -force -norecurse C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block jtag_axi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reset_inv_0 .
+Exporting to file c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/hw_handoff/design_1_smartconnect_0_0.hwh
+Generated Block Design Tcl file c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/hw_handoff/design_1_smartconnect_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/synth/design_1_smartconnect_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fsm_0 .
+Exporting to file C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Tue Mar 12 22:50:34 2024] Launched synth_1...
+Run output will be captured here: C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/synth_1/runme.log
+[Tue Mar 12 22:50:34 2024] Launched impl_1...
+Run output will be captured here: C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 2987.688 ; gain = 97.828
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 JTAG AXI core(s).
+get_hw_axis
+hw_axi_1
+create_hw_axi_txn -force read_mem [get_hw_axis hw_axi_1] -type read -address C000_0000 -len 1
+read_mem
+run_hw_axi [get_hw_axi_txns read_mem]
+INFO: [Labtoolstcl 44-481] READ DATA is: 00000000
+open_bd_design {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/design_1.bd}
+set_property PROBES.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/jackd/ECE194BB_Final/ECE194BB_Final.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 JTAG AXI core(s).
+create_hw_axi_txn -force read_mem [get_hw_axis hw_axi_1] -type read -address C000_0000 -len 1
+read_mem
+run_hw_axi [get_hw_axi_txns read_mem]
+INFO: [Labtoolstcl 44-481] READ DATA is: 00000000
+create_hw_axi_txn -force write_mem [get_hw_axis hw_axi_1] -type write -address C000_0000 -len 1 -data {12345678}
+write_mem
+run_hw_axi [get_hw_axi_txns write_mem]
+INFO: [Labtoolstcl 44-481] WRITE DATA is: 12345678
+run_hw_axi [get_hw_axi_txns read_mem]
+INFO: [Labtoolstcl 44-481] READ DATA is: 12345678
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_1/design_1_axi_bram_ctrl_0_1.dcp' for cell 'design_1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.dcp' for cell 'design_1_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.dcp' for cell 'design_1_i/axi_gpio_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/design_1_smartconnect_0_0.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1.dcp' for cell 'design_1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_7/design_1_clk_wiz_7.dcp' for cell 'design_1_i/clk_wiz'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_fsm_0_0/design_1_fsm_0_0.dcp' for cell 'design_1_i/fsm_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_jtag_axi_0_1/design_1_jtag_axi_0_1.dcp' for cell 'design_1_i/jtag_axi_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_reset_inv_0_0/design_1_reset_inv_0_0.dcp' for cell 'design_1_i/reset_inv_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_7/design_1_rst_clk_wiz_100M_7.dcp' for cell 'design_1_i/rst_clk_wiz_100M'
+INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: design_1_i/jtag_axi_0 UUID: 53e5f1c3-10b9-52d3-bb10-986c3375587a 
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_jtag_axi_0_1/constraints/jtag_axi.xdc] for cell 'design_1_i/jtag_axi_0/inst'
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_jtag_axi_0_1/constraints/jtag_axi.xdc] for cell 'design_1_i/jtag_axi_0/inst'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_board.xdc] for cell 'design_1_i/axi_gpio_1/U0'
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_board.xdc] for cell 'design_1_i/axi_gpio_1/U0'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xdc] for cell 'design_1_i/axi_gpio_1/U0'
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xdc] for cell 'design_1_i/axi_gpio_1/U0'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_7/design_1_clk_wiz_7_board.xdc] for cell 'design_1_i/clk_wiz/inst'
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_7/design_1_clk_wiz_7_board.xdc] for cell 'design_1_i/clk_wiz/inst'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_7/design_1_clk_wiz_7.xdc] for cell 'design_1_i/clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_7/design_1_clk_wiz_7.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_7/design_1_clk_wiz_7.xdc:57]
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_7/design_1_clk_wiz_7.xdc] for cell 'design_1_i/clk_wiz/inst'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_7/design_1_rst_clk_wiz_100M_7_board.xdc] for cell 'design_1_i/rst_clk_wiz_100M/U0'
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_7/design_1_rst_clk_wiz_100M_7_board.xdc:3]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_7/design_1_rst_clk_wiz_100M_7_board.xdc] for cell 'design_1_i/rst_clk_wiz_100M/U0'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_7/design_1_rst_clk_wiz_100M_7.xdc] for cell 'design_1_i/rst_clk_wiz_100M/U0'
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_7/design_1_rst_clk_wiz_100M_7.xdc] for cell 'design_1_i/rst_clk_wiz_100M/U0'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/jackd/ECE194BB_Final/ECE194BB_Final.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [E:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'design_1_i/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3896.668 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 48 instances were transformed.
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 40 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 8 instances
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 3896.668 ; gain = 0.000
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 72 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.249 . Memory (MB): peak = 4095.586 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.250 . Memory (MB): peak = 4095.586 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 4095.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 54 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 40 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 8 instances
+
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 12 23:58:18 2024...
